@@ -8,6 +8,8 @@
 
 import UIKit
 
+import Firebase
+
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var emailTextField: UITextField!
@@ -40,6 +42,29 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     func login(withEmail email: String, password: String) {
 
+        Auth.auth().signIn(withEmail: email, password: password) { user, error in
+
+            if error != nil {
+
+                self.showErrorAlert(of: "ログインに失敗しました。再度お試しください")
+                return
+            }
+
+            guard let user = user else {
+
+                self.showErrorAlert(of: "ログイン失敗しました。再度お試しください")
+                return
+            }
+
+            if user.isEmailVerified {
+
+                self.dismiss(animated: true, completion: nil)
+            }
+            else {
+
+                self.showErrorAlert(of: "メールアドレスを認証してください")
+            }
+        }
     }
 
     func showErrorAlert(of message: String) {
