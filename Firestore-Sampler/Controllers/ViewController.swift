@@ -8,6 +8,8 @@
 
 import UIKit
 
+import Firebase
+
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var tableView: UITableView!
@@ -17,6 +19,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         tableView.delegate = self
         tableView.dataSource = self
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if Auth.auth().currentUser != nil {
+
+            let controller = SignupViewController.instantiate()
+            self.present(controller, animated: true, completion: nil)
+        }
+        else if let user = Auth.auth().currentUser, !user.isEmailVerified {
+
+            let alert = UIAlertController(title: "エラー", message: "メールアドレスを認証してください", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
