@@ -58,17 +58,15 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2v-r1-Fip">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2v-r1-Fip">
                                 <rect key="frame" x="161" y="345" width="52" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign up"/>
                                 <connections>
                                     <action selector="didSelectedSignup:" destination="sLo-2N-b2T" eventType="touchUpInside" id="VCR-On-P7Y"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lda-bw-2FU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lda-bw-2FU">
                                 <rect key="frame" x="157" y="392" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="to Log in"/>
                                 <connections>
                                     <action selector="didSelectedLogin:" destination="sLo-2N-b2T" eventType="touchUpInside" id="OnJ-pu-R5W"/>
@@ -77,9 +75,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Lda-bw-2FU" firstAttribute="top" secondItem="b2v-r1-Fip" secondAttribute="bottom" constant="17" id="8q3-uw-GVk"/>
                             <constraint firstItem="aPl-wR-8uP" firstAttribute="top" secondItem="4NI-p5-khv" secondAttribute="top" constant="24" id="OYB-m6-ZkZ"/>
+                            <constraint firstItem="b2v-r1-Fip" firstAttribute="top" secondItem="aPl-wR-8uP" secondAttribute="bottom" constant="37" id="P5M-Ie-R5x"/>
                             <constraint firstItem="4NI-p5-khv" firstAttribute="trailing" secondItem="aPl-wR-8uP" secondAttribute="trailing" constant="16" id="byf-vb-cTj"/>
                             <constraint firstItem="aPl-wR-8uP" firstAttribute="leading" secondItem="4NI-p5-khv" secondAttribute="leading" constant="16" id="g23-OG-PQz"/>
+                            <constraint firstItem="Lda-bw-2FU" firstAttribute="centerX" secondItem="YWV-P4-VJR" secondAttribute="centerX" id="gZp-Uu-RjT"/>
+                            <constraint firstItem="b2v-r1-Fip" firstAttribute="centerX" secondItem="YWV-P4-VJR" secondAttribute="centerX" id="iak-OT-XRn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4NI-p5-khv"/>
                     </view>
