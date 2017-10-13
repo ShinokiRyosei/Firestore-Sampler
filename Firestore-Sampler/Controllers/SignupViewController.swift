@@ -60,6 +60,11 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
+    @IBAction func didSelectedLogin(_ sender: UIButton) {
+
+        self.performSegue(withIdentifier: "toLogin", sender: nil)
+    }
+
     func showErrorAlert(of message: String) {
 
         let alert = UIAlertController(title: "エラー", message: message, preferredStyle: .alert)
@@ -85,10 +90,8 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
                     return
                 }
 
-                // TODO: ログインへ遷移
-
+                self.dismiss(animated: true, completion: nil)
             })
-
         }
     }
 }
