@@ -12,6 +12,13 @@ import Firebase
 
 class SignupViewController: UIViewController, UITextFieldDelegate {
 
+    static func instantiate() -> UINavigationController {
+
+        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+        let controller = storyboard.instantiateInitialViewController() as! UINavigationController
+        return controller
+    }
+
     @IBOutlet var emailTextField: UITextField!
 
     @IBOutlet var passwordTextField: UITextField!
