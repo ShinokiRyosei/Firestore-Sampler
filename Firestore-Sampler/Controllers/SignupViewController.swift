@@ -8,6 +8,8 @@
 
 import UIKit
 
+import Firebase
+
 class SignupViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var emailTextField: UITextField!
@@ -60,5 +62,26 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
 
     func signup(withEmail email: String, password: String) {
 
+        Auth.auth().createUser(withEmail: email, password: password) { user, error in
+
+            if error != nil {
+
+                self.showErrorAlert(of: "サインアップに失敗しました。再度試してください。")
+                return
+            }
+
+            user?.sendEmailVerification(completion: { error in
+
+                if error != nil {
+
+                    self.showErrorAlert(of: "サインアップに失敗しました。")
+                    return
+                }
+
+                // TODO: ログインへ遷移
+
+            })
+
+        }
     }
 }
