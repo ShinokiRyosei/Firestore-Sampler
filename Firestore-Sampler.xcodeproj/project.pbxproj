@@ -82,9 +82,8 @@
 		398504981F9137B7001B1BF7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				398504961F91378D001B1BF7 /* SignupViewController.swift */,
+				39BEDD271F91468300A3FE16 /* Auth */,
 				398504831F913308001B1BF7 /* ViewController.swift */,
-				39BEDD221F91401D00A3FE16 /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -97,6 +96,15 @@
 				39BEDD1E1F913D2200A3FE16 /* Auth.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		39BEDD271F91468300A3FE16 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				398504961F91378D001B1BF7 /* SignupViewController.swift */,
+				39BEDD221F91401D00A3FE16 /* LoginViewController.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		6A48F851B56FC76D68B8D621 /* Frameworks */ = {
