@@ -70,6 +70,9 @@
                                 <rect key="frame" x="157" y="392" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="to Log in"/>
+                                <connections>
+                                    <action selector="didSelectedLogin:" destination="sLo-2N-b2T" eventType="touchUpInside" id="OnJ-pu-R5W"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -85,11 +88,27 @@
                         <outlet property="emailTextField" destination="bfY-ZX-meH" id="l8o-3K-nk4"/>
                         <outlet property="passwordConfirmTextField" destination="L02-y5-Prq" id="bhC-pW-OeH"/>
                         <outlet property="passwordTextField" destination="8Ql-8Q-1L7" id="2WM-Jq-1hf"/>
+                        <segue destination="XTK-75-aWE" kind="show" identifier="toLogin" id="TB0-sD-ro4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYN-hX-V1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="428" y="110.19490254872565"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="CfG-wv-SMQ">
+            <objects>
+                <viewController id="XTK-75-aWE" customClass="LoginViewController" customModule="Firestore_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nfu-fn-BgN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="KAt-aW-O6Z"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bFt-My-8g6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1215" y="109"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Znx-E0-5hE">

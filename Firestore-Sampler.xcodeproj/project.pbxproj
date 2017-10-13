@@ -15,6 +15,7 @@
 		398504951F9134CB001B1BF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 398504941F9134C9001B1BF7 /* GoogleService-Info.plist */; };
 		398504971F91378D001B1BF7 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398504961F91378D001B1BF7 /* SignupViewController.swift */; };
 		39BEDD201F913D2200A3FE16 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BEDD1E1F913D2200A3FE16 /* Auth.storyboard */; };
+		39BEDD231F91401D00A3FE16 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEDD221F91401D00A3FE16 /* LoginViewController.swift */; };
 		CC4E61573B6E2A30180917DA /* Pods_Firestore_Sampler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81951C0E97D4CE05639EDD3 /* Pods_Firestore_Sampler.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		398504941F9134C9001B1BF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		398504961F91378D001B1BF7 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		39BEDD1F1F913D2200A3FE16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
+		39BEDD221F91401D00A3FE16 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F7630EF01D8D9E5B1F571995 /* Pods-Firestore-Sampler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firestore-Sampler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Firestore-Sampler/Pods-Firestore-Sampler.debug.xcconfig"; sourceTree = "<group>"; };
 		F81951C0E97D4CE05639EDD3 /* Pods_Firestore_Sampler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firestore_Sampler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,6 +84,7 @@
 			children = (
 				398504961F91378D001B1BF7 /* SignupViewController.swift */,
 				398504831F913308001B1BF7 /* ViewController.swift */,
+				39BEDD221F91401D00A3FE16 /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39BEDD231F91401D00A3FE16 /* LoginViewController.swift in Sources */,
 				398504971F91378D001B1BF7 /* SignupViewController.swift in Sources */,
 				398504841F913308001B1BF7 /* ViewController.swift in Sources */,
 				398504821F913308001B1BF7 /* AppDelegate.swift in Sources */,
