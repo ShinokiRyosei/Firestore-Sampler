@@ -66,15 +66,23 @@
 			isa = PBXGroup;
 			children = (
 				398504811F913308001B1BF7 /* AppDelegate.swift */,
-				398504831F913308001B1BF7 /* ViewController.swift */,
+				398504981F9137B7001B1BF7 /* Controllers */,
 				398504851F913308001B1BF7 /* Main.storyboard */,
 				398504881F913308001B1BF7 /* Assets.xcassets */,
 				3985048A1F913308001B1BF7 /* LaunchScreen.storyboard */,
 				3985048D1F913308001B1BF7 /* Info.plist */,
 				398504941F9134C9001B1BF7 /* GoogleService-Info.plist */,
-				398504961F91378D001B1BF7 /* SignupViewController.swift */,
 			);
 			path = "Firestore-Sampler";
+			sourceTree = "<group>";
+		};
+		398504981F9137B7001B1BF7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				398504961F91378D001B1BF7 /* SignupViewController.swift */,
+				398504831F913308001B1BF7 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		6A48F851B56FC76D68B8D621 /* Frameworks */ = {
