@@ -12,9 +12,11 @@
 		398504871F913308001B1BF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 398504851F913308001B1BF7 /* Main.storyboard */; };
 		398504891F913308001B1BF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 398504881F913308001B1BF7 /* Assets.xcassets */; };
 		3985048C1F913308001B1BF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3985048A1F913308001B1BF7 /* LaunchScreen.storyboard */; };
+		CC4E61573B6E2A30180917DA /* Pods_Firestore_Sampler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81951C0E97D4CE05639EDD3 /* Pods_Firestore_Sampler.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16635A79E9FABE4D927A5226 /* Pods-Firestore-Sampler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firestore-Sampler.release.xcconfig"; path = "Pods/Target Support Files/Pods-Firestore-Sampler/Pods-Firestore-Sampler.release.xcconfig"; sourceTree = "<group>"; };
 		3985047E1F913308001B1BF7 /* Firestore-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firestore-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		398504811F913308001B1BF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		398504831F913308001B1BF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		398504881F913308001B1BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3985048B1F913308001B1BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3985048D1F913308001B1BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7630EF01D8D9E5B1F571995 /* Pods-Firestore-Sampler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firestore-Sampler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Firestore-Sampler/Pods-Firestore-Sampler.debug.xcconfig"; sourceTree = "<group>"; };
+		F81951C0E97D4CE05639EDD3 /* Pods_Firestore_Sampler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firestore_Sampler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC4E61573B6E2A30180917DA /* Pods_Firestore_Sampler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				398504801F913308001B1BF7 /* Firestore-Sampler */,
 				3985047F1F913308001B1BF7 /* Products */,
+				75277728399233B2ECB8EA01 /* Pods */,
+				6A48F851B56FC76D68B8D621 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = "Firestore-Sampler";
 			sourceTree = "<group>";
 		};
+		6A48F851B56FC76D68B8D621 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F81951C0E97D4CE05639EDD3 /* Pods_Firestore_Sampler.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		75277728399233B2ECB8EA01 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7630EF01D8D9E5B1F571995 /* Pods-Firestore-Sampler.debug.xcconfig */,
+				16635A79E9FABE4D927A5226 /* Pods-Firestore-Sampler.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 398504901F913308001B1BF7 /* Build configuration list for PBXNativeTarget "Firestore-Sampler" */;
 			buildPhases = (
+				BAA1B0FDD555EC90E43BF99B /* [CP] Check Pods Manifest.lock */,
 				3985047A1F913308001B1BF7 /* Sources */,
 				3985047B1F913308001B1BF7 /* Frameworks */,
 				3985047C1F913308001B1BF7 /* Resources */,
+				5D75A4031A869E18791E5517 /* [CP] Embed Pods Frameworks */,
+				5CFD7CEB5076C7BA9139D654 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5CFD7CEB5076C7BA9139D654 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Firestore-Sampler/Pods-Firestore-Sampler-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D75A4031A869E18791E5517 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Firestore-Sampler/Pods-Firestore-Sampler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAA1B0FDD555EC90E43BF99B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3985047A1F913308001B1BF7 /* Sources */ = {
@@ -272,6 +347,7 @@
 		};
 		398504911F913308001B1BF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7630EF01D8D9E5B1F571995 /* Pods-Firestore-Sampler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +363,7 @@
 		};
 		398504921F913308001B1BF7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16635A79E9FABE4D927A5226 /* Pods-Firestore-Sampler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
