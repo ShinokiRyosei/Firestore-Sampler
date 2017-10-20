@@ -24,7 +24,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        if Auth.auth().currentUser != nil {
+        if Auth.auth().currentUser == nil {
 
             let controller = SignupViewController.instantiate()
             self.present(controller, animated: true, completion: nil)
