@@ -74,23 +74,29 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
 
     func signup(withEmail email: String, password: String) {
 
-        Auth.auth().createUser(withEmail: email, password: password) { user, error in
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
 
             if error != nil {
 
-                self.showErrorAlert(of: "サインアップに失敗しました。再度試してください。")
+                self?.showErrorAlert(of: "サインアップに失敗しました。再度試してください。")
                 return
             }
 
-            user?.sendEmailVerification(completion: { error in
+            result?.user.sendEmailVerification(completion: { error in
 
                 if error != nil {
 
-                    self.showErrorAlert(of: "サインアップに失敗しました。")
+                    self?.showErrorAlert(of: "サインアップに失敗しました。")
                     return
                 }
 
-                self.dismiss(animated: true, completion: nil)
+                let alert = UIAlertController(title: "サインアップしました", message: "登録に際してメールアドレスの認証を行ってください", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] _ in
+
+                    self?.dismiss(animated: true, completion: nil)
+                }))
+
+                self?.present(alert, animated: true, completion: nil)
             })
         }
     }

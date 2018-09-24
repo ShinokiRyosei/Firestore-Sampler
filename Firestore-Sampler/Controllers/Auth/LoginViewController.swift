@@ -42,27 +42,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     func login(withEmail email: String, password: String) {
 
-        Auth.auth().signIn(withEmail: email, password: password) { user, error in
+        Auth.auth().signIn(withEmail: email, password: password) { [ weak self] result, error in
 
             if error != nil {
 
-                self.showErrorAlert(of: "ログインに失敗しました。再度お試しください")
+                self?.showErrorAlert(of: "ログインに失敗しました。再度お試しください")
+                return
+            }
+            guard let dataResult = result else {
+
+                self?.showErrorAlert(of: "ログイン失敗しました。再度お試しください")
                 return
             }
 
-            guard let user = user else {
+            if dataResult.user.isEmailVerified {
 
-                self.showErrorAlert(of: "ログイン失敗しました。再度お試しください")
-                return
-            }
-
-            if user.isEmailVerified {
-
-                self.dismiss(animated: true, completion: nil)
+                self?.dismiss(animated: true, completion: nil)
             }
             else {
 
-                self.showErrorAlert(of: "メールアドレスを認証してください")
+                self?.showErrorAlert(of: "メールアドレスを認証してください")
             }
         }
     }
